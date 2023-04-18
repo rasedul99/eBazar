@@ -9,6 +9,7 @@ import Categories from "../../components/Categories";
 import Arrival from "../../components/Arrival";
 import Discount from "../../components/Discount";
 import Phone from "../../components/Phone";
+import Announcment from "../../components/Announcment";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,6 +41,7 @@ export default function Home() {
       <Arrival />
       <Discount />
       <Phone />
+      <Announcment />
     </>
   );
 }
