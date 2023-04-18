@@ -3,9 +3,12 @@ import React from "react";
 import { AiOutlineSearch, AiOutlineUser } from "react-icons/ai";
 import { FaShoppingBag } from "react-icons/fa";
 import { useRouter } from "next/router";
+import { useCartContext } from "../ctx/cartContext";
 
 const Navbar = () => {
   const router = useRouter();
+  const { cartItems } = useCartContext();
+
   return (
     <div className="bg-white shadow-md sticky top-0 overflow-hidden z-20 ">
       <div className="max-w-7xl mx-auto ">
@@ -56,7 +59,7 @@ const Navbar = () => {
               <FaShoppingBag size={20} />
               <div className="relative">
                 <span className="absolute top-[-48px] right-[-14px] bg-[#E94560] p-1  rounded-full  text-sm text-white">
-                  00
+                  {cartItems?.length}
                 </span>
               </div>
             </Link>
