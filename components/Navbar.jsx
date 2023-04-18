@@ -84,6 +84,9 @@ const Navbar = () => {
             >
               <Link href="/fashion">Fashion</Link>
             </li>
+            <li className="cursor-pointer transition-all hover:text-primary">
+              <Link href="/admin">Dashboard</Link>
+            </li>
           </ul>
         </div>
         {/* menu item end  */}
