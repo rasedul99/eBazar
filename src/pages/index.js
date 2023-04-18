@@ -6,6 +6,7 @@ import Navbar from "../../components/Navbar";
 import Hero from "../../components/Hero";
 import FlashDeals from "../../components/flashDeals/FlashDeals";
 import Categories from "../../components/Categories";
+import Arrival from "../../components/Arrival";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,6 +35,7 @@ export default function Home() {
       <Hero />
       <FlashDeals />
       <Categories />
+      <Arrival />
     </>
   );
 }
