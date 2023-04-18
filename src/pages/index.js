@@ -10,6 +10,7 @@ import Arrival from "../../components/Arrival";
 import Discount from "../../components/Discount";
 import Phone from "../../components/Phone";
 import Announcment from "../../components/Announcment";
+import Services from "../../components/Services";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,6 +43,7 @@ export default function Home() {
       <Discount />
       <Phone />
       <Announcment />
+      <Services />
     </>
   );
 }
