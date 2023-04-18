@@ -7,6 +7,7 @@ import Hero from "../../components/Hero";
 import FlashDeals from "../../components/flashDeals/FlashDeals";
 import Categories from "../../components/Categories";
 import Arrival from "../../components/Arrival";
+import Discount from "../../components/Discount";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,6 +37,7 @@ export default function Home() {
       <FlashDeals />
       <Categories />
       <Arrival />
+      <Discount />
     </>
   );
 }
