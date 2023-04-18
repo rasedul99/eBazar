@@ -10,11 +10,13 @@ const Navbar = () => {
     <div className="bg-white shadow-md sticky top-0 overflow-hidden z-20 ">
       <div className="max-w-7xl mx-auto ">
         <div className="flex justify-between items-center mx-2 pt-5 ">
-          <div className="">
-            <h2 className="text-[#E94560] font-extrabold text-2xl">
-              <Link href="/">eBazar</Link>
-            </h2>
-          </div>
+          {/* logo */}
+          <h2 className="text-[#E94560] font-extrabold text-2xl">
+            <Link href="/">eBazar</Link>
+          </h2>
+          {/* logo end */}
+
+          {/* input box start */}
 
           <div className="hidden border border-[#808080] md:flex items-center  gap-x-3 rounded-3xl w-1/3">
             <AiOutlineSearch size={20} className="mx-2" />
@@ -24,6 +26,9 @@ const Navbar = () => {
               className="outline-none py-2 "
             />
           </div>
+          {/* input box end */}
+
+          {/* user section and cart start */}
           <div className="flex justify-between items-center ">
             <div className="bg-gray-400 rounded-full p-2 group">
               <AiOutlineUser size={20} />
@@ -56,8 +61,10 @@ const Navbar = () => {
               </div>
             </Link>
           </div>
+          {/* user section and cart end */}
         </div>
 
+        {/* menu item start */}
         <div className=" flex justify-center md:justify-end pt-6 pb-4">
           <ul className="flex items-center gap-x-6">
             <li
@@ -76,6 +83,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+        {/* menu item end  */}
       </div>
     </div>
   );
