@@ -1,6 +1,7 @@
 import React from "react";
 import { data } from "../../adminData/data.js";
-import { FaShoppingBag } from "react-icons/fa";
+
+import { AiOutlineShopping } from "react-icons/ai";
 
 const RecentOrders = () => {
   return (
@@ -8,12 +9,9 @@ const RecentOrders = () => {
       <h1>Recent Orders</h1>
       <ul>
         {data.map((order, id) => (
-          <li
-            key={id}
-            className="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 flex items-center cursor-pointer"
-          >
-            <div className="bg-purple-100 rounded-lg p-3">
-              <FaShoppingBag className="text-purple-800" />
+          <li key={id} className=" my-3 p-2 flex items-center cursor-pointer">
+            <div className="p-3">
+              <AiOutlineShopping className="text-purple" size={20} />
             </div>
             <div className="pl-4">
               <p className="text-gray-800 font-bold">${order.total}</p>

@@ -24,10 +24,10 @@ const NotFound = () => {
             Homepage
           </Link>
           <Link
-            href="/fashion"
+            href="/admin"
             className="m-2 text-blue underline hover:text-[#ff0000]"
           >
-            Fashion
+            Admin
           </Link>
           <Link
             href="/"

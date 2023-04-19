@@ -2,9 +2,8 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="flex justify-between px-4 pt-4">
-      <h2>Dashboard</h2>
-      <h2>Welcome Back</h2>
+    <div className="text-center px-4 pt-4">
+      <h2>Hello Admin ,Welcome to the Dashboard </h2>
     </div>
   );
 };
