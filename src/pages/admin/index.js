@@ -3,6 +3,7 @@ import React from "react";
 import Head from "next/head";
 import Header from "../../../components/admin/Header";
 import Layout from "../../../components/admin/Layout";
+import TopCards from "../../../components/admin/TopCards";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <main className="bg-[#D3D3D3] min-h-screen">
         <Layout>
           <Header />
+          <TopCards />
         </Layout>
       </main>
     </div>
