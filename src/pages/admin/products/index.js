@@ -15,22 +15,29 @@ const Prodcuts = () => {
       <div class="container justify-center mx-auto flex flex-col p-4  bg-white overflow-y-auto">
         <div class="overflow-x-auto shadow-md sm:rounded-lg">
           <div class="inline-block min-w-full align-middle ">
-            <div class="p-4">
-              <label for="table-search" class="sr-only">
-                Search
-              </label>
-              <div class="relative mt-1">
-                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                  <RiSearchLine />
+            <div class="p-4 flex justify-between">
+              <div>
+                {" "}
+                <label for="table-search" class="sr-only">
+                  Search
+                </label>
+                <div class="relative mt-1">
+                  <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                    <RiSearchLine />
+                  </div>
+                  <input
+                    type="text"
+                    id="table-search"
+                    class=" border border-gray text-gray text-sm rounded-lg focus:ring-blue-500 focus:border-blue block w-80 pl-10 p-2.5  "
+                    placeholder="Search for items"
+                  />
                 </div>
-                <input
-                  type="text"
-                  id="table-search"
-                  class=" border border-gray text-gray text-sm rounded-lg focus:ring-blue-500 focus:border-blue block w-80 pl-10 p-2.5  "
-                  placeholder="Search for items"
-                />
               </div>
+              <button className="bg-purple text-white px-2 py-3 rounded-md">
+                Add Product
+              </button>
             </div>
+
             <div class="overflow-hidden">
               <table class="min-w-full table-fixed  divide-y divide-purple ">
                 <thead>
