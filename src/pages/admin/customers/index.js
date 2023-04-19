@@ -14,9 +14,12 @@ const customers = () => {
           <div className="inline-block min-w-full align-middle ">
             <div className="p-4 flex justify-between items-center ">
               <p className="text-xl">Customer List</p>
-              <button className="bg-purple text-white px-4 py-2 rounded-md">
+              <Link
+                href="/admin/customers/addcustomer"
+                className="bg-purple text-white px-4 py-2 rounded-md"
+              >
                 Add Customer
-              </button>
+              </Link>
             </div>
 
             <div className="overflow-hidden">

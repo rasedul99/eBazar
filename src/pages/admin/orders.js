@@ -10,11 +10,8 @@ const orders = () => {
       <div className="container justify-center mx-auto flex flex-col p-4  bg-white overflow-y-auto">
         <div className="overflow-x-auto shadow-md sm:rounded-lg">
           <div className="inline-block min-w-full align-middle ">
-            <div className="p-4 flex justify-between items-center ">
+            <div className="p-4 ">
               <p className="text-xl">Order List</p>
-              <button className="bg-purple text-white px-4 py-2 rounded-md">
-                Add Order
-              </button>
             </div>
 
             <div className="overflow-hidden">
