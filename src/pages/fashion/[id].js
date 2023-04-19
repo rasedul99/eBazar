@@ -1,12 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../../../components/Layout";
 import { UseCartContext } from "../../../ctx/cartContext";
+import { useRouter } from "next/router";
 
-const fashionDetails = ({ fashion, id }) => {
-  const fashionDetails = fashion.find((data) => id == data.id);
-  console.log(fashionDetails);
-  const [quantity, setQuantity] = useState(1);
+const FashionDetails = () => {
+  const router = useRouter();
+  const { id } = router.query;
   const { addToCart } = UseCartContext();
+
+  const [fashion, setFashion] = useState();
+  const [quantity, setQuantity] = useState(1);
+
+  const fashionDetails = fashion?.find((data) => id == data.id);
+
+  useEffect(() => {
+    fetch("https://rasedul99.github.io/repliq_fake_data/fashion.json")
+      .then((response) => response.json())
+      .then((data) => setFashion(data.fashion));
+  }, []);
 
   const addQuantity = (command) => {
     setQuantity((prev) => {
@@ -31,7 +42,7 @@ const fashionDetails = ({ fashion, id }) => {
                 <div className="sticky top-0  overflow-hidden ">
                   <div className="relative mb-6 lg:mb-10 lg:h-2/4 ">
                     <img
-                      src={fashionDetails.img}
+                      src={fashionDetails?.img}
                       alt=""
                       className="object-cover w-full lg:h-full "
                     />
@@ -40,7 +51,7 @@ const fashionDetails = ({ fashion, id }) => {
                     <div className="w-1/2 p-2 sm:w-1/4">
                       <a href="#" className="block border border-primary">
                         <img
-                          src={fashionDetails.img}
+                          src={fashionDetails?.img}
                           alt=""
                           className="object-cover w-full lg:h-20"
                         />
@@ -49,7 +60,7 @@ const fashionDetails = ({ fashion, id }) => {
                     <div className="w-1/2 p-2 sm:w-1/4">
                       <a href="#" className="block border border-primary">
                         <img
-                          src={fashionDetails.img}
+                          src={fashionDetails?.img}
                           alt=""
                           className="object-cover w-full lg:h-20"
                         />
@@ -58,7 +69,7 @@ const fashionDetails = ({ fashion, id }) => {
                     <div className="w-1/2 p-2 sm:w-1/4">
                       <a href="#" className="block border border-primary">
                         <img
-                          src={fashionDetails.img}
+                          src={fashionDetails?.img}
                           alt=""
                           className="object-cover w-full lg:h-20"
                         />
@@ -67,7 +78,7 @@ const fashionDetails = ({ fashion, id }) => {
                     <div className="w-1/2 p-2 sm:w-1/4">
                       <a href="#" className="block border border-primary">
                         <img
-                          src={fashionDetails.img}
+                          src={fashionDetails?.img}
                           alt=""
                           className="object-cover w-full lg:h-20"
                         />
@@ -145,17 +156,17 @@ const fashionDetails = ({ fashion, id }) => {
                       <p className="text-xs  ">(2 customer reviews)</p>
                     </div>
                     <p className="max-w-md mb-8  ">
-                      {fashionDetails.description}
+                      {fashionDetails?.description}
                     </p>
                     <p className="inline-block mb-8 text-4xl font-bold   ">
                       <span>
                         $
-                        {parseInt(fashionDetails.price) -
-                          (parseInt(fashionDetails.price) / 100) *
-                            parseInt(fashionDetails.discount)}
+                        {parseInt(fashionDetails?.price) -
+                          (parseInt(fashionDetails?.price) / 100) *
+                            parseInt(fashionDetails?.discount)}
                       </span>
                       <span className="text-base font-normal line-through ">
-                        {fashionDetails.price}.00
+                        {fashionDetails?.price}.00
                       </span>
                     </p>
                     <p className=" ">7 in stock</p>
@@ -235,19 +246,4 @@ const fashionDetails = ({ fashion, id }) => {
   );
 };
 
-export default fashionDetails;
-
-export async function getServerSideProps(context) {
-  const id = context.params.id;
-  const res = await fetch(
-    "https://rasedul99.github.io/repliq_fake_data/fashion.json"
-  );
-  const { fashion } = await res.json();
-
-  return {
-    props: {
-      fashion,
-      id,
-    },
-  };
-}
+export default FashionDetails;
