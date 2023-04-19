@@ -26,6 +26,17 @@ const Sidebar = ({ children }) => {
               <RxDashboard size={20} />
             </div>
           </Link>
+          {/* Products section */}
+          <Link href="/admin/products">
+            <div
+              className={`hover:bg-[#EEEEEE] cursor-pointer my-4 p-3 rounded-lg inline-block ${
+                router.pathname == "/admin/products" ? "bg-[#EEEEEE]" : ""
+              }`}
+            >
+              <RiProductHuntLine size={20} />
+            </div>
+          </Link>
+          {/* Customer section */}
           <Link href="/admin/customers">
             <div
               className={`hover:bg-[#EEEEEE] cursor-pointer my-4 p-3 rounded-lg inline-block ${
@@ -35,6 +46,7 @@ const Sidebar = ({ children }) => {
               <RxPerson size={20} />
             </div>
           </Link>
+          {/* order section */}
           <Link href="/admin/orders">
             <div
               className={`hover:bg-[#EEEEEE] cursor-pointer my-4 p-3 rounded-lg inline-block ${
@@ -44,15 +56,7 @@ const Sidebar = ({ children }) => {
               <HiOutlineShoppingBag size={20} />
             </div>
           </Link>
-          <Link href="/admin/products">
-            <div
-              className={`hover:bg-[#EEEEEE] cursor-pointer my-4 p-3 rounded-lg inline-block ${
-                router.pathname == "/admin/product" ? "bg-[#EEEEEE]" : ""
-              }`}
-            >
-              <RiProductHuntLine size={20} />
-            </div>
-          </Link>
+          {/* Setting */}
           <Link href="/admin/setting">
             <div
               className={`hover:bg-[#EEEEEE] cursor-pointer my-4 p-3 rounded-lg inline-block ${

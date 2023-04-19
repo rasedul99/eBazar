@@ -4,7 +4,7 @@ import Layout from "../../../../components/admin/Layout";
 
 const Prodcuts = () => {
   const [products, setProducts] = useState();
-  console.log(products);
+  
   useEffect(() => {
     fetch("https://rasedul99.github.io/repliq_fake_data/fashion.json")
       .then((response) => response.json())
