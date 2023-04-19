@@ -108,7 +108,7 @@ const Phone = () => {
       <div className="">
         <p className="py-5 font-semibold text-xl text-center">Mobile Phones </p>
         <div className="flex justify-center md:justify-between  flex-wrap gap-3">
-          {shopItems.map((item) => {
+          {shopItems.slice(0, 8).map((item) => {
             return (
               <div className="shadow-lg p-5 rounded-md bg-white ">
                 <p className="bg-primary rounded-md px-2 text-white inline-block">

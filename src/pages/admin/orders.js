@@ -37,14 +37,14 @@ const orders = () => {
                       <p className=" text-sm">{order.name.first}</p>
                     </div>
                   </div>
-                  <p className=" sm:text-left text-right">
+                  <p className=" sm:text-left text-right text-white">
                     <span
                       className={
                         order.status == "Processing"
-                          ? "bg-[#8dee8d] p-2 rounded-lg"
+                          ? "bg-yellow p-2 rounded-lg"
                           : order.status == "Completed"
-                          ? "bg-[#ea40ea] p-2 rounded-lg"
-                          : "bg-[#e2e22b] p-2 rounded-lg"
+                          ? "bg-green p-2 rounded-lg"
+                          : "bg-orange p-2 rounded-lg"
                       }
                     >
                       {order.status}
