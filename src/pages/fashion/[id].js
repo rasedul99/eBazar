@@ -1,14 +1,8 @@
-"use client";
 import React, { useState } from "react";
 import Layout from "../../../components/Layout";
 import { UseCartContext } from "../../../ctx/cartContext";
-import { useRouter } from "next/router";
 
-const fashionDetails = ({ fashion }) => {
-  const router = useRouter();
-  const { id } = router.query;
-  console.log(id);
-
+const fashionDetails = ({ fashion, id }) => {
   const fashionDetails = fashion.find((data) => id == data.id);
   console.log(fashionDetails);
   const [quantity, setQuantity] = useState(1);
@@ -243,7 +237,8 @@ const fashionDetails = ({ fashion }) => {
 
 export default fashionDetails;
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
+  const id = context.params.id;
   const res = await fetch(
     "https://rasedul99.github.io/repliq_fake_data/fashion.json"
   );
@@ -252,6 +247,7 @@ export async function getServerSideProps() {
   return {
     props: {
       fashion,
+      id,
     },
   };
 }
