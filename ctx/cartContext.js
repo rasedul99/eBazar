@@ -52,6 +52,6 @@ export const CartProvider = ({ children }) => {
   );
 };
 
-export function useCartContext() {
+export function UseCartContext() {
   return useContext(cartContext);
 }

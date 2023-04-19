@@ -3,11 +3,11 @@ import React from "react";
 import { AiOutlineSearch, AiOutlineUser } from "react-icons/ai";
 import { FaShoppingBag } from "react-icons/fa";
 import { useRouter } from "next/router";
-import { useCartContext } from "../ctx/cartContext";
+import { UseCartContext } from "../ctx/cartContext";
 
 const Navbar = () => {
   const router = useRouter();
-  const { cartItems } = useCartContext();
+  const { cartItems } = UseCartContext();
 
   return (
     <div className="bg-white shadow-md sticky top-0 overflow-hidden z-20 ">

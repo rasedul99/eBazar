@@ -8,10 +8,10 @@ const Announcment = () => {
     <div>
       <section className="bg-[#F6F9FC] flex justify-center gap-x-4 px-6 md:px-20 py-10">
         <div>
-          <Image src={banner1} />
+          <Image src={banner1} alt="banner" />
         </div>
         <div>
-          <Image src={banner2} />
+          <Image src={banner2} alt="banner" />
         </div>
       </section>
     </div>

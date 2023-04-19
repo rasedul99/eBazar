@@ -2,11 +2,11 @@ import React from "react";
 import Layout from "../../../components/Layout";
 import { AiOutlineDelete } from "react-icons/ai";
 import { BsArrowLeftCircle } from "react-icons/bs";
-import { useCartContext } from "../../../ctx/cartContext";
+import { UseCartContext } from "../../../ctx/cartContext";
 import Link from "next/link";
 
 const cart = () => {
-  const { cartItems, removeCartItem } = useCartContext();
+  const { cartItems, removeCartItem } = UseCartContext();
   const subtotal = cartItems?.reduce((total, item) => {
     return (
       parseInt(item.quantity) *
@@ -29,9 +29,12 @@ const cart = () => {
                     <div className="md:grid md:grid-cols-3 gap-2 ">
                       <div className="col-span-2 p-5">
                         <h1 className="text-xl font-medium ">Shopping Cart</h1>
-                        {cartItems.map((item,index) => {
+                        {cartItems.map((item, index) => {
                           return (
-                            <div key={index} className="flex justify-between items-center mt-6 pt-6">
+                            <div
+                              key={index}
+                              className="flex justify-between items-center mt-6 pt-6"
+                            >
                               <div className="flex  items-center">
                                 <img
                                   src={item.img}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../../../components/Layout";
+import { UseCartContext } from "../../../ctx/cartContext";
 import { useRouter } from "next/router";
-import { useCartContext } from "../../../ctx/cartContext";
 
 const fashionDetails = ({ fashion }) => {
   const router = useRouter();
@@ -11,7 +11,7 @@ const fashionDetails = ({ fashion }) => {
   const fashionDetails = fashion.find((data) => id == data.id);
   console.log(fashionDetails);
   const [quantity, setQuantity] = useState(1);
-  const { addToCart } = useCartContext();
+  const { addToCart } = UseCartContext();
 
   const addQuantity = (command) => {
     setQuantity((prev) => {
