@@ -100,7 +100,7 @@ const orders = () => {
 
                         <td className="py-4 px-6 text-sm font-medium  whitespace-nowrap flex gap-x-2">
                           <BiEdit size={20} />
-                          <AiOutlineDelete size={20} />
+                          <AiOutlineDelete size={20} className="text-red" />
                         </td>
                       </tr>
                     );

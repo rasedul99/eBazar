@@ -3,6 +3,7 @@ import { RiSearchLine } from "react-icons/ri";
 import { BiEdit } from "react-icons/bi";
 import { AiOutlineDelete } from "react-icons/ai";
 import Layout from "../../../../components/admin/Layout";
+import Link from "next/link";
 
 const Prodcuts = () => {
   const [products, setProducts] = useState();
@@ -36,9 +37,12 @@ const Prodcuts = () => {
                   />
                 </div>
               </div>
-              <button className="bg-purple text-white px-4 py-2 rounded-md">
+              <Link
+                href="/admin/products/addproduct"
+                className="bg-purple text-white px-4 py-2 rounded-md"
+              >
                 Add Product
-              </button>
+              </Link>
             </div>
 
             <div className="overflow-hidden">
@@ -150,7 +154,7 @@ const Prodcuts = () => {
 
                         <td className="py-4 px-6 text-sm font-medium  whitespace-nowrap flex gap-x-2">
                           <BiEdit size={20} />
-                          <AiOutlineDelete size={20} />
+                          <AiOutlineDelete size={20} className="text-red" />
                         </td>
                       </tr>
                     );
