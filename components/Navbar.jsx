@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React from "react";
 import { AiOutlineSearch, AiOutlineUser } from "react-icons/ai";
-import { RxHamburgerMenu } from "react-icons/rx";
 import { FaShoppingBag } from "react-icons/fa";
 import { useRouter } from "next/router";
 import { useCartContext } from "../ctx/cartContext";
@@ -64,7 +63,7 @@ const Navbar = () => {
               Sign In
             </Link>
             <div className="hidden md:flex bg-gray rounded-full p-2 group">
-              <AiOutlineUser size={20} />
+              <AiOutlineUser size={20} className="text-white" />
               <div className="hidden   bg-[#F6F9FC] md:px-40 px-10   py-2 group-hover:flex flex-col items-center justify-center gap-y-1 transition-all rounded-xl absolute right-2  md:right-10 overflow-visible z-50 ">
                 <Link
                   href="/signin"
@@ -75,7 +74,7 @@ const Navbar = () => {
                 <p className="text-sm">
                   new to eBazar{" "}
                   <Link href="/signup" className="text-primary">
-                    Start here
+                    Create an account
                   </Link>
                 </p>
               </div>
@@ -84,9 +83,9 @@ const Navbar = () => {
             <Link
               href="/cart"
               passHref
-              className="bg-gray-400 rounded-full p-2 mx-2"
+              className="bg-gray rounded-full p-2 mx-2"
             >
-              <FaShoppingBag size={20} />
+              <FaShoppingBag size={20} className="text-white" />
               <div className="relative">
                 <span className="absolute top-[-48px] right-[-14px] bg-[#E94560] p-1  rounded-full  text-sm text-white">
                   {cartItems?.length}

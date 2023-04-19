@@ -1,38 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project made by Rasedul Islam
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Getting Started
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+You can see the homepage where 11 section have been made.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+# Header
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Header section was created by dummy data
 
-## Learn More
+# Navbar
 
-To learn more about Next.js, take a look at the following resources:
+Navar section was created with cart component using context API
+Hover over the user Icon you will see login logout
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Hero
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Here i used for sliding npm package slick-carousel that was aweosome to make slider with responsive for all screen.
+By the way for sliding i used dummy data here.
 
-## Deploy on Vercel
+# Flash deal
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Its another sliding section .By the way if you click view all button right side of flash deal section
+you will go fashion page.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# .... Homepage
+
+## Pages
+
+# Fashion
+
+In this page i fetched data from [https://github.com/rasedul99/repliq_fake_data/blob/main/fashion.json](https://github.com/rasedul99/repliq_fake_data/blob/main/fashion.
+json)
+Click item you will go details page where you will show details of fashion product and you can increase your quantity then click by add to cart button it will add in cart.
+
+# Cart
+
+there you will see your cart items with total cost and you can delete item from cart.
+for chechkout section its just ui there is no functionality
+
+## Admin Dashboard
+
+# Homepage
+
+There is just overview or Summary of dashboard using dummy data
+
+# Product List
+
+YaY ,This is my enjoyed section of this task The reason behind here i used useEffect here.
+Here data fetched from [https://github.com/rasedul99/repliq_fake_data/blob/main/fashion.json](https://github.com/rasedul99/repliq_fake_data/blob/main/fashion.
+json) using fetch method of javascript with the help of useEffect and you can filter data from input section just for Brand .
+
+Add product button from right side you can see add product ui.
+
+# Customer
+
+There was shown customer list And you can after click add Customer button add customer ui.
+
+# Order
+
+There is an order list with dummy data
+
+# Setting
+
+I didnot implement setting page but if you click this you will see custome notFound page
