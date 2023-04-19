@@ -43,10 +43,7 @@ const fashionDetails = ({ fashion }) => {
                   </div>
                   <div className="flex-wrap hidden md:flex ">
                     <div className="w-1/2 p-2 sm:w-1/4">
-                      <a
-                        href="#"
-                        className="block border border-blue-300 dark:border-transparent dark:hover:border-blue-300 hover:border-blue-300"
-                      >
+                      <a href="#" className="block border border-primary">
                         <img
                           src={fashionDetails.img}
                           alt=""
@@ -55,10 +52,7 @@ const fashionDetails = ({ fashion }) => {
                       </a>
                     </div>
                     <div className="w-1/2 p-2 sm:w-1/4">
-                      <a
-                        href="#"
-                        className="block border border-transparent dark:border-transparent dark:hover:border-blue-300 hover:border-blue-300"
-                      >
+                      <a href="#" className="block border border-primary">
                         <img
                           src={fashionDetails.img}
                           alt=""
@@ -67,10 +61,7 @@ const fashionDetails = ({ fashion }) => {
                       </a>
                     </div>
                     <div className="w-1/2 p-2 sm:w-1/4">
-                      <a
-                        href="#"
-                        className="block border border-transparent dark:border-transparent dark:hover:border-blue-300 hover:border-blue-300"
-                      >
+                      <a href="#" className="block border border-primary">
                         <img
                           src={fashionDetails.img}
                           alt=""
@@ -79,10 +70,7 @@ const fashionDetails = ({ fashion }) => {
                       </a>
                     </div>
                     <div className="w-1/2 p-2 sm:w-1/4">
-                      <a
-                        href="#"
-                        className="block border border-transparent dark:border-transparent dark:hover:border-blue-300 hover:border-blue-300"
-                      >
+                      <a href="#" className="block border border-primary">
                         <img
                           src={fashionDetails.img}
                           alt=""
@@ -97,7 +85,7 @@ const fashionDetails = ({ fashion }) => {
                 <div className="lg:pl-20">
                   <div className="mb-8 ">
                     <span className="text-lg font-medium">New</span>
-                    <h2 className="max-w-xl mt-2 mb-6 text-2xl font-bold dark:text-gray-400 md:text-4xl">
+                    <h2 className="max-w-xl mt-2 mb-6 text-2xl font-bold  md:text-4xl">
                       {fashionDetails?.brand}
                     </h2>
                     <div className="flex items-center mb-6">
@@ -161,16 +149,17 @@ const fashionDetails = ({ fashion }) => {
                       </ul>
                       <p className="text-xs  ">(2 customer reviews)</p>
                     </div>
-                    <p className="max-w-md mb-8 text-gray-700 ">
+                    <p className="max-w-md mb-8  ">
                       {fashionDetails.description}
                     </p>
-                    <p className="inline-block mb-8 text-4xl font-bold text-gray-700  ">
+                    <p className="inline-block mb-8 text-4xl font-bold   ">
                       <span>
                         $
-                        {(fashionDetails.price / 100) *
-                          parseInt(fashionDetails.discount)}
+                        {parseInt(fashionDetails.price) -
+                          (parseInt(fashionDetails.price) / 100) *
+                            parseInt(fashionDetails.discount)}
                       </span>
-                      <span className="text-base font-normal text-gray-500 line-through ">
+                      <span className="text-base font-normal line-through ">
                         {fashionDetails.price}.00
                       </span>
                     </p>
@@ -198,7 +187,7 @@ const fashionDetails = ({ fashion }) => {
                     <label for="" className="w-full text-xl font-semibold  ">
                       Quantity
                     </label>
-                    <div className="relative flex flex-row w-full h-10 mt-4 bg-transparent rounded-lg">
+                    <div className="relative flex flex-row w-full h-10 mt-4  rounded-lg">
                       <button className="w-20 h-full  rounded-l outline-none cursor-pointer ">
                         <span
                           className="m-auto text-2xl font-thin"
@@ -209,7 +198,7 @@ const fashionDetails = ({ fashion }) => {
                       </button>
                       <input
                         type="number"
-                        className="flex items-center w-full font-semibold text-center  outline-none dark:text-gray-400 focus:outline-none text-md hover:text-black"
+                        className="flex items-center w-full font-semibold text-center  outline-none  focus:outline-none text-md hover:text-black"
                         placeholder="1"
                         value={quantity}
                       />

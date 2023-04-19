@@ -53,7 +53,7 @@ const signup = () => {
             <div className="mt-6">
               <button
                 type="submit"
-                className="px-4 py-3 bg-[#2F855A] text-white rounded  focus:outline-none focus:shadow-outline block w-full"
+                className="px-4 py-3 bg-primary text-white rounded  focus:outline-none focus:shadow-outline block w-full"
               >
                 Sign UP
               </button>

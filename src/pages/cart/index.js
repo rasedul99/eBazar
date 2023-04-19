@@ -1,16 +1,23 @@
 import React from "react";
 import Layout from "../../../components/Layout";
 import { AiOutlineDelete } from "react-icons/ai";
+import { BsArrowLeftCircle } from "react-icons/bs";
 import { useCartContext } from "../../../ctx/cartContext";
+import Link from "next/link";
 
 const cart = () => {
   const { cartItems, removeCartItem } = useCartContext();
   const subtotal = cartItems?.reduce((total, item) => {
-    return item.quantity * (item.price / 100) * parseInt(item.discount) + total;
+    return (
+      parseInt(item.quantity) *
+        (parseInt(item.price) -
+          (parseInt(item.price) / 100) * parseInt(item.discount)) +
+      total
+    );
   }, 0);
   return (
     <Layout>
-      <div className="h-screen">
+      <div className="h-full">
         <div className="py-12">
           <div className="max-w-md mx-auto bg-[#F6F9FC] shadow-lg rounded-lg  md:max-w-5xl">
             <div className="md:flex ">
@@ -56,9 +63,9 @@ const cart = () => {
                                 <div className="pr-8 ">
                                   <span className="text-xs font-medium">
                                     $
-                                    {item.quantity *
-                                      (item.price / 100) *
-                                      parseInt(item.discount)}
+                                    {parseInt(item.price) -
+                                      (parseInt(item.price) / 100) *
+                                        parseInt(item.discount)}
                                   </span>
                                 </div>
 
@@ -71,17 +78,21 @@ const cart = () => {
                         })}
 
                         <div className="flex justify-between items-center mt-6 pt-6 border-t">
-                          <div className="flex items-center">
-                            <span className="text-md  font-medium ">
+                          <div className="flex items-center gap-x-2">
+                            <BsArrowLeftCircle className="text-primary" />
+                            <Link
+                              href="/fashion"
+                              className="text-md  font-medium text-primary"
+                            >
                               Continue Shopping
-                            </span>
+                            </Link>
                           </div>
 
                           <div className="flex justify-center items-end">
                             <span className="text-sm font-medium  ">
-                              Subtotal:
+                              Subtotal :
                             </span>
-                            <span className="text-lg font-bold  ">
+                            <span className="text-sm font-medium  ">
                               ${subtotal}
                             </span>
                           </div>

@@ -11,6 +11,7 @@ import shop6 from "../public/images/shops/shops-6.png";
 import shop7 from "../public/images/shops/shops-7.png";
 import shop8 from "../public/images/shops/shops-8.png";
 import shop9 from "../public/images/shops/shops-9.png";
+import Link from "next/link";
 
 const Phone = () => {
   const shopItems = [
@@ -106,7 +107,12 @@ const Phone = () => {
         <Brand />
       </div>
       <div className="">
-        <p className="py-5 font-semibold text-xl text-center">Mobile Phones </p>
+        <div className="flex items-center justify-between py-2">
+          <p className="font-semibold text-xl text-center">Mobile Phones </p>
+          <Link href="/fashion" className="font-normal  text-red">
+            View All
+          </Link>
+        </div>
         <div className="flex justify-center md:justify-between  flex-wrap gap-3">
           {shopItems.slice(0, 8).map((item) => {
             return (
