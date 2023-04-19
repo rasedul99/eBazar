@@ -63,9 +63,9 @@ const orders = () => {
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray">
-                  {data?.map((order) => {
+                  {data?.map((order, index) => {
                     return (
-                      <tr className="hover:bg-[#D7D7D7]">
+                      <tr key={index} className="hover:bg-[#D7D7D7]">
                         <td className="p-4 w-4">
                           <div className="flex items-center">
                             <AiOutlineShopping />

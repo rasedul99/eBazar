@@ -66,9 +66,9 @@ const Categories = () => {
       {/* slider  */}
 
       <Slider {...settings}>
-        {Tdata.map((data) => {
+        {Tdata.map((data, index) => {
           return (
-            <div className="relative bg-white p-3">
+            <div key={index} className="relative bg-white p-3">
               <div className=" absolute top-4 mx-3 w-full">
                 <div className="flex justify-between mt-1">
                   <p className="bg-[#0f3460] rounded-md px-2  text-white">

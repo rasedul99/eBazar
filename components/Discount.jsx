@@ -100,8 +100,8 @@ const Discount = () => {
       </div>
 
       <Slider {...settings}>
-        {discountData.map((discount) => (
-          <Dcard discount={discount} />
+        {discountData.map((discount, index) => (
+          <Dcard key={index} discount={discount} />
         ))}
       </Slider>
     </section>

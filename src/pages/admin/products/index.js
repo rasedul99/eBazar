@@ -123,9 +123,9 @@ const Prodcuts = () => {
                     ?.filter((product) =>
                       product.brand.toLowerCase().includes(inputText)
                     )
-                    .map((product) => {
+                    .map((product, index) => {
                       return (
-                        <tr className="hover:bg-[#D7D7D7]">
+                        <tr key={index} className="hover:bg-[#D7D7D7] ">
                           <td className="p-4 w-4">
                             <div className="flex items-center">
                               <input

@@ -116,9 +116,9 @@ const FlashDealCard = () => {
   return (
     <>
       <Slider {...settings}>
-        {flashDeals.map((flashDeal) => {
+        {flashDeals.map((flashDeal, index) => {
           return (
-            <div className="p-5 rounded-md bg-white flex gap-5">
+            <div key={index} className="p-5 rounded-md bg-white flex gap-5">
               <p className="bg-primary rounded-md px-2 text-white inline-block">
                 {flashDeal.discount}% Off
               </p>

@@ -29,9 +29,9 @@ const cart = () => {
                     <div className="md:grid md:grid-cols-3 gap-2 ">
                       <div className="col-span-2 p-5">
                         <h1 className="text-xl font-medium ">Shopping Cart</h1>
-                        {cartItems.map((item) => {
+                        {cartItems.map((item,index) => {
                           return (
-                            <div className="flex justify-between items-center mt-6 pt-6">
+                            <div key={index} className="flex justify-between items-center mt-6 pt-6">
                               <div className="flex  items-center">
                                 <img
                                   src={item.img}

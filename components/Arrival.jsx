@@ -53,9 +53,9 @@ const Arrival = () => {
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2  bg-white p-3 ">
-        {ArrivalData.map((arrival) => {
+        {ArrivalData.map((arrival, index) => {
           return (
-            <div className="flex flex-col gap-y-1">
+            <div key={index} className="flex flex-col gap-y-1">
               <Image src={arrival.cover} height={200} width={200} />
               <p>{arrival.name}</p>
               <p className="text-primary">${arrival.price}</p>

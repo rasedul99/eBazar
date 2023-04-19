@@ -18,15 +18,10 @@ const Header = () => {
           </div>
 
           <ul className="flex gap-x-2 md:gap-x-5 text-sm">
-            <li className="cursor-pointer"> Theme FAQ"s</li>
+            <li className="cursor-pointer"> Theme FAQS</li>
             <li className="cursor-pointer"> Need Help?</li>
-            <li className="cursor-pointer">
-              {" "}
-              <span className="hidden md:inline ">🏳️‍⚧️</span> EN
-            </li>
-            <li className="cursor-pointer">
-              <span className="hidden md:inline">🏳️‍⚧️</span> USD
-            </li>
+            <li className="cursor-pointer"> EN</li>
+            <li className="cursor-pointer"> USD</li>
           </ul>
         </div>
       </div>

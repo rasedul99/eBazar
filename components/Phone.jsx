@@ -114,9 +114,9 @@ const Phone = () => {
           </Link>
         </div>
         <div className="flex justify-center md:justify-between  flex-wrap gap-3">
-          {shopItems.slice(0, 8).map((item) => {
+          {shopItems.slice(0, 8).map((item, index) => {
             return (
-              <div className="shadow-lg p-5 rounded-md bg-white ">
+              <div key={index} className="shadow-lg p-5 rounded-md bg-white ">
                 <p className="bg-primary rounded-md px-2 text-white inline-block">
                   {item.discount}% Off
                 </p>
