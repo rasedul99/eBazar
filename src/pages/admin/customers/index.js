@@ -1,7 +1,8 @@
 import React from "react";
 import { BsPersonFill, BsThreeDotsVertical } from "react-icons/bs";
-import { data } from "../../../adminData/data.js";
-import Layout from "../../../components/admin/Layout.jsx";
+import { data } from "../../../../adminData/data.js";
+import Layout from "../../../../components/admin/Layout.jsx";
+import Link from "next/link.js";
 
 const customers = () => {
   return (
@@ -21,7 +22,10 @@ const customers = () => {
             </div>
             <ul>
               {data.map((order, id) => (
-                <li
+                <Link
+                  href={`/admin/customers/${(
+                    order.name.first + order.name.last
+                  ).toLowerCase()}`}
                   key={id}
                   className="hover:bg-[#D7D7D7] rounded-lg my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer"
                 >
@@ -41,7 +45,7 @@ const customers = () => {
                     <p>{order.method}</p>
                     <BsThreeDotsVertical />
                   </div>
-                </li>
+                </Link>
               ))}
             </ul>
           </div>
