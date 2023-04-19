@@ -10,6 +10,9 @@ const customers = () => {
       <div className="bg-[#D7D7D7] min-h-screen">
         <div className="flex justify-between p-4">
           <h2>Customers</h2>
+          <button className="bg-purple text-white px-2 py-3 rounded-md">
+            Add New Customer
+          </button>
           <h2>Welcome Back</h2>
         </div>
         <div className="p-4">
