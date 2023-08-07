@@ -15,21 +15,22 @@ const Navbar = () => {
   return (
     <div className="bg-white shadow-md sticky top-0 overflow-hidden z-20 ">
       <div className="max-w-7xl mx-auto ">
-        <div className="flex justify-between items-center  md:mx-2 pt-5 pb-1 md:pb-0 ">
+        <div className="flex justify-between items-center  mx-2 pt-5 pb-1 md:pb-0 ">
           <RxHamburgerMenu
             size={24}
             className="md:hidden"
             onClick={() => setIsOpen(!isOpen)}
           />
 
-          {/* logo */}
+          {/*brand logo */}
           <h2 className="text-[#E94560] font-extrabold text-2xl">
             <Link href="/">eBazar</Link>
           </h2>
-          {/* logo end */}
+          {/* brand logo end */}
 
           {/* menu item start */}
-          <div className=" hidden md:flex justify-center md:justify-end pt-6 pb-4">
+
+          <div className=" hidden md:flex justify-center  pt-6 pb-4">
             <ul className="flex  md:items-center gap-x-6">
               <li
                 className={`cursor-pointer transition-all hover:text-primary ${
@@ -69,9 +70,12 @@ const Navbar = () => {
             <div className="hidden md:flex hover:bg-[#F1F5F9] rounded-full p-3">
               <FiSearch size={24} />
             </div>
-            <div className=" hover:bg-[#F1F5F9] rounded-full p-3 ">
+            <Link
+              href="/signin"
+              className=" hover:bg-[#F1F5F9] rounded-full p-3 "
+            >
               <AiOutlineUser size={24} />
-            </div>
+            </Link>
 
             <Link
               href="/cart"
@@ -88,6 +92,32 @@ const Navbar = () => {
           </div>
           {/* user section and cart end */}
         </div>
+        {/* mobile navbar */}
+        {isOpen && (
+          <div className="md:hidden flex flex-col px-2  pb-4">
+            <ul className="flex flex-col gap-y-4">
+              <li
+                className={`cursor-pointer transition-all hover:text-primary ${
+                  router.pathname === "/" ? "text-primary " : ""
+                }`}
+              >
+                <Link href="/">Home</Link>
+              </li>
+              <li
+                className={`cursor-pointer transition-all hover:text-primary ${
+                  router.pathname === "/fashion" ? "text-primary " : ""
+                }`}
+              >
+                <Link href="/fashion">Fashion</Link>
+              </li>
+              <li className="cursor-pointer transition-all hover:text-primary">
+                <Link href="/admin">Dashboard</Link>
+              </li>
+            </ul>
+          </div>
+        )}
+
+        {/* mobile navbar */}
       </div>
     </div>
   );

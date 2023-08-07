@@ -3,7 +3,7 @@ import { BsTelephone } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
 const Header = () => {
   return (
-    <div className=" bg-[#0F3460] py-3 text-white px-1">
+    <div className=" hidden md:flex bg-[#0F3460] py-3 text-white px-1">
       <div className="max-w-7xl mx-auto ">
         <div className="flex justify-between gap-x-2">
           <div className="flex gap-x-2  md:gap-x-5 items-center">

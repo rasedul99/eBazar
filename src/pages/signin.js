@@ -6,7 +6,7 @@ const signin = () => {
     <div className="min-h-screen flex items-center justify-center bg-[#F7FAFC]">
       <div className="px-5 py-6 lg:px-6 lg:py-8 w-full md:w-8/12 lg:w-6/12 xl:w-4/12 ">
         <div className="mb-6 text-center">
-          <h3 className="text-3xl inline-flex items-center">REPLIO</h3>
+          <h3 className="text-3xl inline-flex items-center">eBazar</h3>
           <p>Welcome, please log in to your Account</p>
         </div>
 
@@ -29,12 +29,13 @@ const signin = () => {
               />
             </label>
             <div className="mt-6">
-              <button
+              <Link
+                href="/"
                 type="submit"
-                className="px-4 py-3 bg-primary text-white rounded  focus:outline-none focus:shadow-outline block w-full"
+                className="px-4 py-3 text-center bg-primary text-white rounded  focus:outline-none focus:shadow-outline block w-full"
               >
-                Sign In
-              </button>
+                Dummy Sign In
+              </Link>
             </div>
           </form>
           <div className="mt-6 text-center text-sm">

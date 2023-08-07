@@ -6,7 +6,7 @@ const signup = () => {
     <div className="min-h-screen flex items-center justify-center bg-[#F7FAFC]">
       <div className="px-5 py-6 lg:px-6 lg:py-8 w-full md:w-8/12 lg:w-6/12 xl:w-4/12 relative">
         <div className="mb-6 text-center">
-          <h3 className="text-3xl inline-flex items-center">REPLIO</h3>
+          <h3 className="text-3xl inline-flex items-center">eBazar</h3>
           <p>Create your own account in one single step</p>
         </div>
 
@@ -51,12 +51,13 @@ const signup = () => {
               </span>
             </label>
             <div className="mt-6">
-              <button
+              <Link
+                href="/"
                 type="submit"
-                className="px-4 py-3 bg-primary text-white rounded  focus:outline-none focus:shadow-outline block w-full"
+                className="px-4 py-3 text-center bg-primary text-white rounded  focus:outline-none focus:shadow-outline block w-full"
               >
-                Sign UP
-              </button>
+                Dummy Sign UP
+              </Link>
             </div>
           </form>
           <div class="mt-6 text-center text-sm">
