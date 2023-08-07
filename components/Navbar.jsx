@@ -11,6 +11,7 @@ const Navbar = () => {
   const router = useRouter();
   const { cartItems } = UseCartContext();
   const [isOpen, setIsOpen] = useState(false);
+  const [searchInput, setSearchInput] = useState(false);
 
   return (
     <div className="bg-white shadow-md sticky top-0 overflow-hidden z-20 ">
@@ -67,16 +68,34 @@ const Navbar = () => {
 
           {/* user section and cart start */}
           <div className="flex justify-between items-center ">
-            <div className="hidden md:flex hover:bg-[#F1F5F9] rounded-full p-3">
-              <FiSearch size={24} />
+            <div>
+              {searchInput ? (
+                <>
+                  <div className="border border-[#808080] md:flex items-center  rounded-md">
+                    <AiOutlineSearch size={20} className="mx-2" />
+                    <input
+                      type="text"
+                      placeholder="Search..."
+                      className="outline-none py-2 "
+                    />
+                  </div>
+                </>
+              ) : (
+                <div
+                  className="hidden md:flex hover:bg-[#F1F5F9] rounded-full p-3"
+                  onClick={() => setSearchInput(true)}
+                >
+                  <FiSearch size={24} />
+                </div>
+              )}
             </div>
+
             <Link
               href="/signin"
               className=" hover:bg-[#F1F5F9] rounded-full p-3 "
             >
               <AiOutlineUser size={24} />
             </Link>
-
             <Link
               href="/cart"
               passHref

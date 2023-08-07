@@ -5,6 +5,7 @@ import tcThree from "../public/images/top/category-3.png";
 import Image from "next/image";
 import Slider from "react-slick";
 import { BiBorderAll, BiChevronDown } from "react-icons/bi";
+import Link from "next/link";
 
 const Categories = () => {
   const Tdata = [
@@ -68,7 +69,7 @@ const Categories = () => {
       <Slider {...settings}>
         {Tdata.map((data, index) => {
           return (
-            <div key={index} className="relative bg-white p-3">
+            <Link href="/fashion" key={index} className="relative bg-white p-3">
               <div className=" absolute top-4 mx-3 w-full">
                 <div className="flex justify-between mt-1">
                   <p className="bg-[#0f3460] rounded-md px-2  text-white">
@@ -85,7 +86,7 @@ const Categories = () => {
                 width={1000}
                 className="rounded-md"
               />
-            </div>
+            </Link>
           );
         })}
       </Slider>

@@ -7,6 +7,7 @@ import sliderone from "../public/images/SlideCard/slide-1.png";
 import slidertwo from "../public/images/SlideCard/slide-2.png";
 import sliderthree from "../public/images/SlideCard/slide-3.png";
 import sliderfour from "../public/images/SlideCard/slide-4.png";
+import Link from "next/link";
 const Hero = () => {
   const silderData = [
     {
@@ -54,9 +55,11 @@ const Hero = () => {
                 <div className="flex flex-col justify-center py-3 gap-y-4">
                   <h1 className="font-bold text-4xl">{value.title}</h1>
                   <p className="max-w-md">{value.desc}</p>
-                  <button className="bg-primary text-white rounded-md p-2 w-40">
-                    Visit Collections
-                  </button>
+                  <Link href="/fashion">
+                    <button className="bg-primary text-white rounded-md p-2 w-40">
+                      Visit Collections
+                    </button>
+                  </Link>
                 </div>
                 <div className="flex items-center">
                   <Image src={value.cover} width={300} height={300} priority />

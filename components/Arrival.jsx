@@ -6,6 +6,7 @@ import arr3 from "../public/images/arrivals/arrivals3.png";
 import arr4 from "../public/images/arrivals/arrivals4.png";
 import arr5 from "../public/images/arrivals/arrivals5.png";
 import arr6 from "../public/images/arrivals/arrivals6.png";
+import Link from "next/link";
 
 const Arrival = () => {
   const ArrivalData = [
@@ -55,11 +56,11 @@ const Arrival = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2  bg-white p-3 ">
         {ArrivalData.map((arrival, index) => {
           return (
-            <div key={index} className="flex flex-col gap-y-1">
+            <Link href="/fashion" key={index} className="flex flex-col gap-y-1">
               <Image src={arrival.cover} height={200} width={200} />
               <p>{arrival.name}</p>
               <p className="text-primary">${arrival.price}</p>
-            </div>
+            </Link>
           );
         })}
       </div>

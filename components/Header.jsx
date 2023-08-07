@@ -3,9 +3,9 @@ import { BsTelephone } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
 const Header = () => {
   return (
-    <div className=" hidden md:flex bg-[#0F3460] py-3 text-white px-1">
+    <div className="hidden md:block bg-[#0F3460] py-3 text-white px-1">
       <div className="max-w-7xl mx-auto ">
-        <div className="flex justify-between gap-x-2">
+        <div className="flex justify-between gap-x-2 mx-2">
           <div className="flex gap-x-2  md:gap-x-5 items-center">
             <div className=" hidden md:flex gap-x-2 items-center">
               <BsTelephone />
@@ -13,7 +13,7 @@ const Header = () => {
             </div>
             <div className="flex gap-x-2 md:gap-x-2 items-center">
               <MdOutlineEmail />
-              <p className="text-sm">mdrased1015@gmail.com</p>
+              <p className="text-sm">rasedul2199@gmail.com</p>
             </div>
           </div>
 

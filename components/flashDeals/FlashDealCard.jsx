@@ -11,6 +11,7 @@ import flshfive from "../../public/images/flash/flash-5.png";
 import Slider from "react-slick";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import { FaStar } from "react-icons/fa";
+import Link from "next/link";
 
 const FlashDealCard = () => {
   const SamplePrevArrow = (props) => {
@@ -118,7 +119,11 @@ const FlashDealCard = () => {
       <Slider {...settings}>
         {flashDeals.map((flashDeal, index) => {
           return (
-            <div key={index} className="p-5 rounded-md bg-white flex gap-5">
+            <Link
+              href="/fashion"
+              key={index}
+              className="p-5 rounded-md bg-white flex gap-5"
+            >
               <p className="bg-primary rounded-md px-2 text-white inline-block">
                 {flashDeal.discount}% Off
               </p>
@@ -147,7 +152,7 @@ const FlashDealCard = () => {
                   +
                 </button>
               </div>
-            </div>
+            </Link>
           );
         })}
       </Slider>

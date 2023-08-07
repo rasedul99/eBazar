@@ -116,7 +116,11 @@ const Phone = () => {
         <div className="flex justify-center md:justify-between  flex-wrap gap-3">
           {shopItems.slice(0, 8).map((item, index) => {
             return (
-              <div key={index} className="shadow-lg p-5 rounded-md bg-white ">
+              <Link
+                href="/fashion"
+                key={index}
+                className="shadow-lg p-5 rounded-md bg-white "
+              >
                 <p className="bg-primary rounded-md px-2 text-white inline-block">
                   {item.discount}% Off
                 </p>
@@ -146,7 +150,7 @@ const Phone = () => {
                     </button>
                   </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
